@@ -4,9 +4,11 @@
     <link rel="stylesheet" href="lib/style.css">
     <script type="module">
 
-        import {agregar} from './lib/index.js';
-      
+        import {agregar,inserta_al_final,insertaAntes_X,insertaDespues_X} from './lib/index.js';
         window.agregar=agregar;
+        window.inserta_al_final=inserta_al_final;
+        window.insertaAntes_X=insertaAntes_X;
+        window.insertaDespues_X=insertaDespues_X;
 
     </script>
 
@@ -23,7 +25,10 @@
     </label>
 
 </form>
-<button onclick="agregar()">agregar</button>
+<button onclick="agregar()">inserta al inicio</button>
+<button onclick="inserta_al_final()">insertar al final</button>
+<button onclick="insertaAntes_X()">insertar antes de [?]</button>
+<button onclick="insertaDespues_X()">insertar despues de [?]</button>
 </body>
 
 </html>
