@@ -2,6 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="lib/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script type="module">
 
         import {agregar,inserta_al_final,insertaAntes_X,insertaDespues_X} from './lib/index.js';
@@ -15,20 +16,25 @@
 </head>
 
 <body>
-    
-<canvas id="tutorial" width="700" height="150"></canvas>
-<div id="salida"></div>
-<br>
-<form>
-    <label for="nodo"><b>Ingrese el nodo :</b>
-        <input type="text" id="nodo"/>
-    </label>
-
-</form>
-<button onclick="agregar()">inserta al inicio</button>
-<button onclick="inserta_al_final()">insertar al final</button>
-<button onclick="insertaAntes_X()">insertar antes de [?]</button>
-<button onclick="insertaDespues_X()">insertar despues de [?]</button>
+<div class="container">
+    <div class="text-center">
+        <h1>Proyecto Lista enlazada grafica</h1>
+        <canvas id="tutorial" width="700" height="150"></canvas>
+        <div id="salida"></div>
+        <br>
+        <form>
+            <label for="nodo"><b>Ingrese el nodo :</b>
+                <input type="text" id="nodo" pattern="[x-z]{1,2}" title="Utiliza una opcion luego de escribir en este cuadro de texto"/>
+            </label>
+            <label for="nodo"><b>ㅤㅤIngrese X :</b>
+                <input type="text" id="nodo2" pattern="[x-z]{1,2}" title="Utiliza una opcion luego de escribir en este cuadro de texto"/>
+            </label>
+        </form>
+        <button class="btn btn-primary"   onclick="agregar()">inserta al inicio</button>
+        <button class="btn btn-secondary" onclick="inserta_al_final()">insertar al final</button>
+        <button class="btn btn-secondary" onclick="insertaAntes_X()">insertar antes de [X]</button>
+        <button class="btn btn-secondary" onclick="insertaDespues_X()">insertar despues de [X]</button>
+    </div>
+</div>
 </body>
-
 </html>
