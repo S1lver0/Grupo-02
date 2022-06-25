@@ -1,4 +1,6 @@
 <html>
+    <title>Proyecto Lista Enlazada</title>
+    <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a773a2dc-1abd-4c03-ac56-b9f8a4c1765b/df80jvm-4945935e-466a-4ead-b6e6-613e58b97faa.png/v1/fill/w_1280,h_1280,strp/pngwing_com__9__by_silver9523_df80jvm-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2E3NzNhMmRjLTFhYmQtNGMwMy1hYzU2LWI5ZjhhNGMxNzY1YlwvZGY4MGp2bS00OTQ1OTM1ZS00NjZhLTRlYWQtYjZlNi02MTNlNThiOTdmYWEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.VUhddX6Gq_mRE6eCGLrUFaqraJm4GI7JLOm7zS4uD30">
 
 <head>
     <link rel="stylesheet" href="lib/style.css">
@@ -6,10 +8,14 @@
     <script type="module">
 
         import {agregar,inserta_al_final,insertaAntes_X,insertaDespues_X} from './lib/index.js';
+        import {eliminarPrimer,eliminarFinal} from './lib/index.js';
         window.agregar=agregar;
         window.inserta_al_final=inserta_al_final;
         window.insertaAntes_X=insertaAntes_X;
         window.insertaDespues_X=insertaDespues_X;
+        ///////////////////////////////////////
+        window.eliminarPrimer=eliminarPrimer;
+        window.eliminarFinal=eliminarFinal;
 
     </script>
 
@@ -34,6 +40,10 @@
         <button class="btn btn-secondary" onclick="inserta_al_final()">insertar al final</button>
         <button class="btn btn-secondary" onclick="insertaAntes_X()">insertar antes de [X]</button>
         <button class="btn btn-secondary" onclick="insertaDespues_X()">insertar despues de [X]</button>
+        <br>
+        <br>
+        <button class="btn btn-danger" onclick="eliminarPrimer()">Eliminar Inicio</button>
+        <button class="btn btn-danger" onclick="eliminarFinal()">Eliminar Final</button>
     </div>
 </div>
 </body>
