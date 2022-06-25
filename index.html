@@ -8,7 +8,7 @@
     <script type="module">
 
         import {agregar,inserta_al_final,insertaAntes_X,insertaDespues_X} from './lib/index.js';
-        import {eliminarPrimer,eliminarFinal} from './lib/index.js';
+        import {eliminarPrimer,eliminarFinal,eliminarX,eliminarDespuesX,eliminarAntesX} from './lib/index.js';
         window.agregar=agregar;
         window.inserta_al_final=inserta_al_final;
         window.insertaAntes_X=insertaAntes_X;
@@ -16,6 +16,9 @@
         ///////////////////////////////////////
         window.eliminarPrimer=eliminarPrimer;
         window.eliminarFinal=eliminarFinal;
+        window.eliminarX=eliminarX;
+        window.eliminarDespuesX=eliminarDespuesX;
+        window.eliminarAntesX=eliminarAntesX;
 
     </script>
 
@@ -44,6 +47,9 @@
         <br>
         <button class="btn btn-danger" onclick="eliminarPrimer()">Eliminar Inicio</button>
         <button class="btn btn-danger" onclick="eliminarFinal()">Eliminar Final</button>
+        <button class="btn btn-danger" onclick="eliminarX()">Eliminar [X]</button>
+        <button class="btn btn-danger" onclick="eliminarAntesX()">Eliminar antes de [X]</button>
+        <button class="btn btn-danger" onclick="eliminarDespuesX()">Eliminar despues de [X]</button>
     </div>
 </div>
 </body>
