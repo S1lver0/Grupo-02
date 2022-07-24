@@ -1,8 +1,12 @@
+body{
+    font-family: 'Press Start 2P', cursive;
+}
+
 #tutorial{
-    border: 1px solid black;height: 200px;width:100%;border-radius: 5px;padding: 10px; background-color: white;
+    border: 1px solid black;height: 200px;width:100%;border-radius: 5px;border-color: white;padding: 10px; background-color: black;
 }
 #tutorial2{
-    border: 1px solid black;height: 200px;width:100%;border-radius: 5px;padding: 10px; background-color: white;
+    border: 1px solid black;height: 200px;width:100%;border-radius: 5px;border-color: white;padding: 10px; background-color: black;
 }
 #consola{
     border: 1px solid black;height: 100px;width: 300px;border-radius: 5px;padding: 10px; background-color: black;
@@ -36,4 +40,16 @@
     .buttoncentermenu{
         text-align: center;
     }
+}
+
+.botone{
+    font-size: 12px;
+}
+
+.titulo{
+    font-size: 30px;
+}
+
+.botonesMenu{
+    font-family: Arial, Helvetica, sans-serif;
 }
