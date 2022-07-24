@@ -1,1 +1,28 @@
-canvas { border: 1px solid black; }
+canvas { border: 1px solid black;height:200px;width:100%;border-radius: 5px;padding: 10px; background-color: white; }
+.container button {
+    width:150px;
+    margin:5px;
+    border-radius: 5px;
+}
+#principal button{
+    width:150px;
+    margin:5px;
+    border-radius: 5px;
+}
+#principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+@media (min-width: 768px){ 
+    .buttonleftmenu{
+        text-align: right;
+    }
+    .buttonrightmenu{
+        text-align: left;
+    }
+    .buttoncentermenu{
+        text-align: center;
+    }
+}

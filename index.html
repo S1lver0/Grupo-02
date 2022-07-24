@@ -3,6 +3,8 @@
     <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a773a2dc-1abd-4c03-ac56-b9f8a4c1765b/df80jvm-4945935e-466a-4ead-b6e6-613e58b97faa.png/v1/fill/w_1280,h_1280,strp/pngwing_com__9__by_silver9523_df80jvm-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2E3NzNhMmRjLTFhYmQtNGMwMy1hYzU2LWI5ZjhhNGMxNzY1YlwvZGY4MGp2bS00OTQ1OTM1ZS00NjZhLTRlYWQtYjZlNi02MTNlNThiOTdmYWEucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.VUhddX6Gq_mRE6eCGLrUFaqraJm4GI7JLOm7zS4uD30">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="lib/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <!-- JS dependencies -->
@@ -18,8 +20,8 @@
     
     <script type="module">
 
-        import {agregar,inserta_al_final,insertaAntes_X,insertaDespues_X} from './lib/index.js';
-        import {eliminarPrimer,eliminarFinal,eliminarX,eliminarDespuesX,eliminarAntesX} from './lib/index.js';
+        import {agregar,inserta_al_final,insertaAntes_X,insertaDespues_X} from './lib/lstSimpLig/index.js';
+        import {eliminarPrimer,eliminarFinal,eliminarX,eliminarDespuesX,eliminarAntesX} from './lib/lstSimpLig/index.js';
         window.agregar=agregar;
         window.inserta_al_final=inserta_al_final;
         window.insertaAntes_X=insertaAntes_X;
@@ -30,47 +32,99 @@
         window.eliminarX=eliminarX;
         window.eliminarDespuesX=eliminarDespuesX;
         window.eliminarAntesX=eliminarAntesX;
+        /////////////////////////////////////
+        import {clickListaSimplementeEnlazada,clickListaCirsularSimplementeEnlazada,clickListaDoblementeEnlazada} from './lib/index.js';
+        window.clickListaSimplementeEnlazada=clickListaSimplementeEnlazada;
+        window.clickListaCirsularSimplementeEnlazada=clickListaCirsularSimplementeEnlazada;
+        window.clickListaDoblementeEnlazada=clickListaDoblementeEnlazada;
 
     </script>
 
 </head>
 
 <body style="background-image: url('https://images.alphacoders.com/605/605743.jpg');">
-<div class="container text-center ">
-    <div class="row">
-        <div class="col">
-        <h1>Lista Enlazada Grafica</h1>
-        <br>
-        <canvas id="tutorial" width="700" height="150"></canvas>
+    <div id="principal">
+        <div class="container">
+            <div class="row text-center" style="margin-bottom: 50px;">
+                <div class="col">
+                    <h1>ALGORITMOS DE OSVALDO CAIRO</h1>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-12 col-sm-12 col-md-4 buttonleftmenu">
+                        <button onclick="clickListaSimplementeEnlazada()">LISTA SIMPLEMENTE LIGADA</button>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 md-auto">
+                        <button onclick="clickListaCirsularSimplementeEnlazada()">LISTA CIRCULAR SIMPLEMENTE LIGADA</button>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 buttonrightmenu">
+                        <button onclick="clickListaDoblementeEnlazada()">LISTA DOBLEMENTE LIGADA</button>
+                </div>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <button class="btn btn-dark" onclick="agregar()">Inserta al inicio</button>
-            <button class="btn btn-dark" onclick="inserta_al_final()">Insertar al final</button>
-            <button class="btn btn-dark" onclick="insertaAntes_X()">Insertar antes de [X]</button>
-            <button class="btn btn-dark" onclick="insertaDespues_X()">Insertar despues de [X]</button>
+    <div id="vista1" style="display: none">
+
+        <div style="margin: 10px">   
+            <canvas id="tutorial"></canvas>
+        </div>
+    
+        <div style="margin: 10px">
+    
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-12 col-md-6 ">
+                        <button onclick="agregar()">Insertar dato al inicio</button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <button onclick="inserta_al_final()">Insertar dato al final</button>
+                    </div>
+                    
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <button onclick="insertaAntes_X()">Insertar dato antes de [X] </button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <button onclick="insertaDespues_X()">Insertar dato despues de [X]</button>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                        <button onclick="window.history.back()">MENU</button>
+                    </div>
+                </div>
+            </div>  
+    
+        </div>
+    </div> 
+
+    <div id="vista2" style="display:none">
+        <div style="margin: 10px">   
+            <canvas id="tutorial2"></canvas>
+        </div>
+    
+        <div  class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <button onclick="window.history.back()">MENU</button>
+                </div>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <button class="btn btn-dark" onclick="eliminarPrimer()">Eliminar Inicio</button>
-            <button class="btn btn-dark" onclick="eliminarFinal()">Eliminar Final</button>
-            <button class="btn btn-dark" onclick="eliminarX()">Eliminar [X]</button>
-            <button class="btn btn-dark" onclick="eliminarAntesX()">Eliminar antes de [X]</button>
-            <button class="btn btn-dark" onclick="eliminarDespuesX()">Eliminar despues de [X]</button>
+    <div id="vista3" style="display:none">
+        <div style="margin: 10px">   
+            <canvas id="tutorial3"></canvas>
+        </div>
+    
+        <div  class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <button onclick="window.history.back()">MENU</button>
+                </div>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col">
-            <h1>Consola</h1>
-            <canvas id="consola" width="700" height="300"></canvas>
-            <h1>ㅤ</h1>
-        </div>
-    </div>
-</div>
+    
 </body>
 </html>
