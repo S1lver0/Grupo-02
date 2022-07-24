@@ -1,7 +1,13 @@
 #tutorial{
     border: 1px solid black;height: 200px;width:100%;border-radius: 5px;padding: 10px; background-color: white;
 }
+#tutorial2{
+    border: 1px solid black;height: 200px;width:100%;border-radius: 5px;padding: 10px; background-color: white;
+}
 #consola{
+    border: 1px solid black;height: 100px;width: 300px;border-radius: 5px;padding: 10px; background-color: black;
+}
+#consola2{
     border: 1px solid black;height: 100px;width: 300px;border-radius: 5px;padding: 10px; background-color: black;
 }
 .container button {
