@@ -65,33 +65,40 @@
     </div>
     <div id="vista1" style="display: none">
 
-        <div style="margin: 10px">   
-            <canvas id="tutorial"></canvas>
+        <div style="margin: 10px">  
+            <h1 class="text-center">Lista Simplemente Enlazada</h1> 
+            <canvas id="tutorial" height="200px"></canvas>
+            <hr>
         </div>
     
         <div style="margin: 10px">
     
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-xs-12 col-sm-12 col-md-6 ">
-                        <button onclick="agregar()">Insertar dato al inicio</button>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <button onclick="inserta_al_final()">Insertar dato al final</button>
-                    </div>
-                    
-                </div>
-                <div class="row text-center">
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <button onclick="insertaAntes_X()">Insertar dato antes de [X] </button>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <button onclick="insertaDespues_X()">Insertar dato despues de [X]</button>
+            <div class="container ">
+                <div class="row my-4">
+                    <div class="col d-flex justify-content-center">
+                        <canvas id="consola" height="100px" width="300px"></canvas>
                     </div>
                 </div>
-                <div class="row text-center">
-                    <div class="col">
-                        <button onclick="window.history.back()">MENU</button>
+                <div class="row my-4">
+                    <div class="col d-flex justify-content-center">
+                        <button class="btn btn-dark btn-sm" onclick="agregar()">Insertar inicio</button>
+                        <button class="btn btn-dark btn-sm" onclick="inserta_al_final()">Insertar dato al final</button>
+                        <button class="btn btn-dark btn-sm" onclick="insertaAntes_X()">Insertar antes de [X] </button>
+                        <button class="btn btn-dark btn-sm" onclick="insertaDespues_X()">Insertar despues de [X]</button>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col d-flex justify-content-center">
+                        <button class="btn btn-dark btn-sm" onclick="eliminarPrimer()">Eliminar Inicio</button>
+                        <button class="btn btn-dark btn-sm" onclick="eliminarFinal()">Eliminar Final</button>
+                        <button class="btn btn-dark btn-sm" onclick="eliminarX()">Eliminar [X] </button>
+                        <button class="btn btn-dark btn-sm" onclick="eliminarDespuesX()">Eliminar despues de [X]</button>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col d-flex justify-content-center">
+                        <button class="btn btn-dark btn-sm" onclick="eliminarAntesX()">Eliminar antes de ⠀[X]</button>
+                        <button class="btn btn-dark btn-sm" onclick="window.history.back()">Menu</button>
                     </div>
                 </div>
             </div>  
