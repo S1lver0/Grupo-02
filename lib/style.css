@@ -8,12 +8,20 @@ body{
 #tutorial2{
     border: 1px solid black;height: 200px;width:100%;border-radius: 5px;border-color: white;padding: 10px; background-color: black;
 }
+#tutorial3{
+    border: 1px solid black;height: 200px;width:100%;border-radius: 5px;border-color: white;padding: 10px; background-color: black;
+}
+
 #consola{
     border: 1px solid black;height: 100px;width: 300px;border-radius: 5px;padding: 10px; background-color: black;
 }
 #consola2{
     border: 1px solid black;height: 100px;width: 300px;border-radius: 5px;padding: 10px; background-color: black;
 }
+#consola3{
+    border: 1px solid black;height: 100px;width: 300px;border-radius: 5px;padding: 10px; background-color: black;
+}
+
 .container button {
     width:150px;
     margin:5px;
